@@ -122,6 +122,12 @@ class KNN:
         for i in range(num_test):
             # TODO: Implement choosing best class based on k
             # nearest training samples
+            nearest = dists[i].argsort()[:self.k]
+#            print(i,': ',nearest, dists[i][nearest])
+            p = self.train_y[nearest]
+            
+            pred[i] = True if p[p==True].shape[0] >= p[p==False].shape[0] else False
+#            print(p, pred[i])
             pass
         return pred
 
