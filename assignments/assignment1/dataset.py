@@ -40,8 +40,8 @@ def load_svhn(folder, max_train, max_test):
     test_X, np array (num_test, 32, 32, 3) - test images
     test_y, np array of int (num_test) - test labels
     '''
-    train_X, train_y = load_data_mat(os.path.join(folder, "train_32x32.mat"), max_train)
-    test_X, test_y = load_data_mat(os.path.join(folder, "test_32x32.mat"), max_test)
+    train_X, train_y = load_data_mat(os.path.join(folder, "train_32x32.mat"), max_train, 17)
+    test_X, test_y = load_data_mat(os.path.join(folder, "test_32x32.mat"), max_test, 17)
     return train_X, train_y, test_X, test_y
 
 

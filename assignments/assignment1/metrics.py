@@ -39,9 +39,9 @@ def binary_classification_metrics(prediction, ground_truth):
     recall = tp/(tp+fn)
     f1 = 2*precision*recall/(precision+recall)
     accuracy = (tp+tn)/(tp+tn+fp+fn)
-    print(tp,tn,fp,fn)
-    print(prediction)
-    print(ground_truth)
+#    print(tp,tn,fp,fn)
+#    print(prediction)
+#    print(ground_truth)
     return precision, recall, f1, accuracy
 
 
